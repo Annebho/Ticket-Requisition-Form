@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+
+  <style>
+    form{
+        color:black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        size:150px;
+    }
+    input[type=text] {
+  width: 450px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+button{
+  background-color: #f7f781;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.form-container {
+display: flex;
+justify-content: space-between;
+gap: 2px;
+margin-left: 150px;
+ }
+ .form-group {
+ display: flex;
+  flex-direction: column;
+ width: 50%;
+
+ }
+ .form-group label {
+ margin-bottom: 8px;
+ }
+.form-group input, .form-group select, .form-group textarea {
+ padding: 8px;
+border: 1px solid #ccc;
+ border-radius: 4px;
+}
+select {
+  width: 450px;
+}
+.date-input{
+  width: 440px;
+}
+.filee{
+  width:450px;
+}
+.prem{
+
+}
+  </style>
+</head>
+<body>
+    <header style="background-color: #f7f781; height: 170px;">
+        <div class="logo">
+            <img src=""
+            <h2>logo</h2>
+            <h1 style="color: black; size: 70px; text-align: left; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Ticket Requisition Form</h1>
+            <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Employee Travel Ticket Application</h2>
+        </div>
+     
+    </header>
+
+
+
+  <form action="process_form.php" method="POST">
+
+    <div class="form-container">
+      <div class="form-group">
+
+        <h3 style="text-decoration:underline; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Passenger_Information__________________________________________________________________________________________________________</h3>
+
+
+    <label for="name">1. Name of Originator:</label>
+    <input type="text" id="name" name="name"required   placeholder="...">                                                
+
+    <label for="empcat">3. Employee Category:</label>
+      <select id="empcat" name="empcat">
+        <option value="Local">Local</option>
+        <option value="Expat">Expat</option>
+      </select><br>
+
+     <label for="text">5. Department :</label>
+     <input type="text" id="department" name="department" required   placeholder="...">
+
+     <label for="text">7. Head of Business Unit:</label>
+     <input type="text" id="hbo" name="hbo" required placeholder="...">
+
+     <h3 style="text-decoration:underline; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Ticket_Requistion_Details______________________________________________________________________________________________________</h3>
+
+
+     <label for="text">9. Location:</label>
+     <input type="text" id="location" name="location" required placeholder="...">
+
+     <label for="empcat">11. Purpose of Travel:</label>
+     <input type="text" id="pot" name="pot" required placeholder="...">
+      
+
+     <label for="dob">13. Airport of Arrival:</label>
+     <input type="text" id="aoa" name="aoa" required placeholder="...">
+
+
+     <label for="text">15. Date of Return:</label> 
+     <input type="date" id="dob" name="dob" class="date-input"><br>
+     
+
+
+     <label for="empcat">17. Hotel Required?:</label>
+     <select id="empcat" name="empcat">
+      <option value="Local">No</option>
+      <option value="Expat">Yes</option>
+    </select>
+      
+    <h3 style="text-decoration:underline; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Ticket_Processing_Details______________________________________________________________________________________________________</h3>
+      
+    <label for="text">19. Account Number:</label>
+    <input type="text" id="accnumb" name="accnumb" required placeholder="Only required if monetization">
+
+    <label for="myfile">21. Attach Supporting Document:</label>
+    <input type="file" id="myfile" name="myfile" class="filee">
+</div>
+
+
+<div class="form-group">
+  
+ <br><br><br><label for="text">2. Job Title:</label>
+<input type="text"id="jobtitle" name="jobtitle" required placeholder="...">
+
+<label for="text">4. Payroll Number:</label>
+<input type="text" id="pnumb" name="pnumb" required placeholder="...">
+
+<label for="text">6. Budget Group:</label>
+<input type="text" id="budgroup" name="budgroup" required placeholder="...">
+
+<label for="text">8. Head of Department:</label>
+<input type="text" id="hod" name="hod" required placeholder="..."><br><br><br>
+
+<label for="text">10. Travel Category:</label>
+<input type="text" id="tcat" name="tcat" required placeholder="..."><br>
+
+<label for="text">12. Flight Type:</label>
+<select id="empcat" name="empcat">
+  <option value="Local">Local</option>
+  <option value="Expat">International</option>
+</select><br>
+
+
+<label for="dob">14. Date of Departure:</label>
+<input type="date" id="dod" name="dod" class="date-input">
+
+<label for="empcat">16. No of Passengers:</label>
+<input type="text" id="nop" name="nop" required placeholder="...">
+
+<label for="text">18. Ticket Type:</label>
+<input type="text" id="ticktype" name="ticktype" required placeholder="Only required if monetization"><br><br>
+
+<label for="text">20. Bank Name:</label>
+    <input type="text" id="bankname" name="bankname" required placeholder="Only required if monetization">
+    
+    <label for="text">22. Passenger Remarks:</label>
+<input type="text" id="prem" name="prem"  required placeholder="...">
+</div>
+</div>
+
+
+     
+<button type="submit">Submit</button>
+  </form>
+</body>
+</html>
